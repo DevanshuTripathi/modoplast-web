@@ -1,4 +1,4 @@
-import { Train, Package, Settings, Hammer } from 'lucide-react';
+import { Train, Package, Settings } from 'lucide-react';
 
 export default function Products() {
   return (

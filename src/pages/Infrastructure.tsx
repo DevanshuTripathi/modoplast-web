@@ -1,4 +1,4 @@
-import { Factory, Wrench, FlaskConical } from 'lucide-react';
+import { Factory, FlaskConical } from 'lucide-react';
 
 export default function Infrastructure() {
   return (

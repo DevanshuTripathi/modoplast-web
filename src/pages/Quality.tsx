@@ -19,7 +19,7 @@ export default function Quality() {
           </p>
         </div>
 
-        <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-lg shadow-lg">
+        <div className="bg-linear-to-br from-blue-50 to-white p-8 rounded-lg shadow-lg">
           <div className="flex items-center justify-center mb-8">
             <Award size={64} className="text-blue-600" />
           </div>

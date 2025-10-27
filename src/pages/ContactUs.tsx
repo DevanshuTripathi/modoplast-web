@@ -42,7 +42,7 @@ export default function ContactUs() {
 
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <MapPin size={24} className="text-red-600 mr-4 flex-shrink-0 mt-1" />
+                  <MapPin size={24} className="text-red-600 mr-4 shrink-0 mt-1" />
                   <div>
                     <h3 className="font-bold text-gray-900 mb-1">Address</h3>
                     <p className="text-gray-700">MODOPLAST COMPANY / BATTEY & KEMP</p>
@@ -52,7 +52,7 @@ export default function ContactUs() {
                 </div>
 
                 <div className="flex items-start">
-                  <Mail size={24} className="text-red-600 mr-4 flex-shrink-0 mt-1" />
+                  <Mail size={24} className="text-red-600 mr-4 shrink-0 mt-1" />
                   <div>
                     <h3 className="font-bold text-gray-900 mb-1">Website</h3>
                     <p className="text-blue-600">www.modoplast.com</p>

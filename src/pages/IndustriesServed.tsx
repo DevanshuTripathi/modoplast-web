@@ -62,7 +62,7 @@ export default function IndustriesServed() {
               className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
             >
               <div className="flex items-start">
-                <Building2 size={32} className="text-red-600 mr-4 flex-shrink-0 mt-1" />
+                <Building2 size={32} className="text-red-600 mr-4 shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold text-blue-900 mb-2">{industry.name}</h3>
                   <p className="text-gray-700">{industry.description}</p>
