@@ -1,4 +1,5 @@
 import { Factory, Cog, Building2 } from 'lucide-react';
+import Maintainance from '../components/Maintainance.tsx';
 
 interface HomeProps {
   onNavigate: (page: string) => void;
@@ -7,7 +8,8 @@ interface HomeProps {
 export default function Home({ onNavigate }: HomeProps) {
   return (
     <div>
-      <section className="relative bg-linear-to-br from-blue-900 to-blue-700 text-white py-20">
+      <Maintainance />
+      <section className="relative bg-linear-to-br from-blue-900 to-blue-700 text-white py-10 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-4 text-red-500">

@@ -22,12 +22,12 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
 
   return (
     <header className="bg-blue-900 text-white shadow-lg sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-evenly items-center py-4">
           <div className="flex items-center space-x-2">
             <div className="text-xl font-bold">
-              <div>MODOPLAST COMPANY</div>
-              <div className="text-sm font-normal">BATTEY & KEMP</div>
+              <div>MODOPLAST COMPANY and BATTEY & KEMP</div>
+              {/* <div>BATTEY & KEMP</div> */}
             </div>
           </div>
 
