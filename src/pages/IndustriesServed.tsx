@@ -1,4 +1,5 @@
 import { Building2 } from 'lucide-react';
+import MaintainanceBar from '../components/MaintainanceBar.tsx';
 
 export default function IndustriesServed() {
   const industries = [
@@ -45,10 +46,16 @@ export default function IndustriesServed() {
     {
       name: 'Rare Earth',
       description: 'Specialized manufacturing components'
+    },
+    {
+      name: 'Chemical Industry',
+      description: 'PP Tank, Filters, Scrubbers, Headers, Pall Ring, Spray Nozzle, Grid, HDPE Pipes & Fittings'
     }
   ];
 
   return (
+    <div>
+      <MaintainanceBar />
     <div className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-blue-900">
@@ -72,6 +79,7 @@ export default function IndustriesServed() {
           ))}
         </div>
       </div>
+    </div>
     </div>
   );
 }

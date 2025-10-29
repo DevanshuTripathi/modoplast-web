@@ -1,7 +1,10 @@
 import { Train, Package, Settings } from 'lucide-react';
+import MaintainanceBar from '../components/MaintainanceBar.tsx';
 
 export default function Products() {
   return (
+    <div>
+      <MaintainanceBar />
     <div className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-6 text-blue-900">
@@ -89,6 +92,7 @@ export default function Products() {
           </section>
         </div>
       </div>
+    </div>
     </div>
   );
 }

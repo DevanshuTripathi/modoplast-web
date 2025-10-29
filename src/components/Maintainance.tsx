@@ -6,13 +6,33 @@ type Props = {
     onClose?: () => void; // called when user dismisses popup
 };
 
+const STORAGE_KEY = "maintenanceDismissedSession";
+
 const Maintainance: React.FC<Props> = ({ contact = "the administrator", open = true, onClose }) => {
-    const [visible, setVisible] = useState<boolean>(open ?? true);
     const closeBtnRef = useRef<HTMLButtonElement | null>(null);
     const titleId = "maintenance-title";
 
+    const wasDismissed = () => {
+        try {
+            return typeof window !== "undefined" && sessionStorage.getItem(STORAGE_KEY) === "1";
+        } catch {
+            return false;
+        }
+    };
+
+    const [visible, setVisible] = useState<boolean>(() => {
+        // If user already dismissed during this browsing session, keep hidden.
+        if (wasDismissed()) return false;
+        return open ?? true;
+    });
+
     useEffect(() => {
-        if (open !== undefined) setVisible(open);
+        // If parent controls `open`, respect it unless already dismissed this session.
+        if (open !== undefined) {
+            if (!wasDismissed()) setVisible(open);
+            else setVisible(false);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [open]);
 
     useEffect(() => {
@@ -29,6 +49,11 @@ const Maintainance: React.FC<Props> = ({ contact = "the administrator", open = t
     }, [visible]);
 
     const handleClose = () => {
+        try {
+            if (typeof window !== "undefined") sessionStorage.setItem(STORAGE_KEY, "1");
+        } catch {
+            // ignore storage errors
+        }
         if (onClose) onClose();
         else setVisible(false);
     };
@@ -125,7 +150,7 @@ const Maintainance: React.FC<Props> = ({ contact = "the administrator", open = t
                             d="M55.9,42.4L31.5,18c-0.6-0.6-1.6-0.5-2.3,0.1L18.1,29.2c-0.7,0.7-0.7,1.7-0.1,2.3l24.4,24.4
                             c0.6,0.6,1.6,0.5,2.3-0.1h0c0.7-0.7,1.7-0.7,2.3-0.1l0.6,0.6c0.6,0.6,0.5,1.6-0.1,2.3l0,0c-0.7,0.7-0.7,1.7-0.1,2.3l5.9,5.9
                             c0.6,0.6,1.6,0.5,2.3-0.1l11.1-11.1c0.7-0.7,0.7-1.7,0.1-2.3l-5.9-5.9c-0.6-0.6-1.6-0.5-2.3,0.1l0,0c-0.7,0.7-1.7,0.7-2.3,0.1
-                            L55.6,47c-0.6-0.6-0.5-1.6,0.1-2.3l0,0C56.4,44,56.5,43,55.9,42.4z"
+                            L55.6,47x-0.6-0.6-0.5-1.6,0.1-2.3l0,0C56.4,44,56.5,43,55.9,42.4z"
                             />
                         </g>
                         </g>

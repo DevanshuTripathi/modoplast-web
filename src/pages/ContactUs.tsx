@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { MapPin, Phone, Mail, Send } from 'lucide-react';
+import MaintainanceBar from '../components/MaintainanceBar.tsx';
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -29,6 +30,8 @@ export default function ContactUs() {
   };
 
   return (
+    <div>
+      <MaintainanceBar />
     <div className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-blue-900">
@@ -75,15 +78,15 @@ export default function ContactUs() {
                     </div>
                     <div className="flex items-center text-gray-700">
                       <Phone size={16} className="mr-2" />
-                      <span>+91 76252 51175</span>
-                    </div>
-                    <div className="flex items-center text-gray-700">
-                      <Mail size={16} className="mr-2" />
-                      <span className="text-sm">batteykemp@gmail.com</span>
+                      <span>+91 76858 51175</span>
                     </div>
                     <div className="flex items-center text-gray-700">
                       <Mail size={16} className="mr-2" />
                       <span className="text-sm">modoplast@gmail.com</span>
+                    </div>
+                    <div className="flex items-center text-gray-700">
+                      <Mail size={16} className="mr-2" />
+                      <span className="text-sm">batteykemp@gmail.com</span>
                     </div>
                   </div>
                 </div>
@@ -98,11 +101,11 @@ export default function ContactUs() {
                     </div>
                     <div className="flex items-center text-gray-700">
                       <Mail size={16} className="mr-2" />
-                      <span className="text-sm">batteykemp@yahoo.in</span>
+                      <span className="text-sm">modoplastcompany@gmail.com</span>
                     </div>
                     <div className="flex items-center text-gray-700">
                       <Mail size={16} className="mr-2" />
-                      <span className="text-sm">modoplastcompany@gmail.com</span>
+                      <span className="text-sm">batteykemp@yahoo.in</span>
                     </div>
                   </div>
                 </div>
@@ -207,6 +210,7 @@ export default function ContactUs() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

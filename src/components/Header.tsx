@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import MP from '../assets/MP.png';
+import BK from '../assets/BK1.png';
 
 interface HeaderProps {
   currentPage: string;
@@ -23,12 +25,13 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
   return (
     <header className="bg-blue-900 text-white shadow-lg sticky top-0 z-50">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-evenly items-center py-4">
-          <div className="flex items-center space-x-2">
-            <div className="text-xl font-bold">
-              <div>MODOPLAST COMPANY and BATTEY & KEMP</div>
-              {/* <div>BATTEY & KEMP</div> */}
-            </div>
+        <div className="flex justify-between items-center py-4">
+          <div className="flex items-center space-x-4">
+            <img src={MP} alt="Modoplast Company logo" className="h-8 md:h-10 w-auto object-contain" />
+
+            <div className="h-10 w-px bg-white/25" />
+
+            <img src={BK} alt="Betty & Kemp logo" className="h-8 md:h-10 w-auto object-contain" />
           </div>
 
           <nav className="hidden lg:flex space-x-1">
