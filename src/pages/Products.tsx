@@ -1,6 +1,4 @@
 import { Train, Package, Settings } from 'lucide-react';
-import MaintainanceBar from '../components/MaintainanceBar.tsx';
-
 // Import all asset images (works with Vite). Adjust if you're using CRA/webpack.
 const importedImages: Record<string, string> = import.meta.glob('../assets/*.{png,jpg,jpeg,svg}', { eager: true, as: 'url' }) as Record<string, string>;
 const imageMap: Record<string, string> = Object.entries(importedImages).reduce((acc, [path, src]) => {
@@ -57,7 +55,6 @@ export default function Products() {
 
   return (
     <div>
-      <MaintainanceBar />
       <div className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-6 text-blue-900">

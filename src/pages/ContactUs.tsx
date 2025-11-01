@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { MapPin, Phone, Mail, Send } from 'lucide-react';
-import MaintainanceBar from '../components/MaintainanceBar.tsx';
+// import MaintainanceBar from '../components/MaintainanceBar.tsx';
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -31,7 +31,6 @@ export default function ContactUs() {
 
   return (
     <div>
-      <MaintainanceBar />
     <div className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-blue-900">

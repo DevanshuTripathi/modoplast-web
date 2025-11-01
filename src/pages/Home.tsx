@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Factory, Cog, Building2, Mail, X } from 'lucide-react';
-import Maintainance from '../components/Maintainance.tsx';
-import MaintainanceBar from '../components/MaintainanceBar.tsx';
+// import Maintainance from '../components/Maintainance.tsx';
+// import MaintainanceBar from '../components/MaintainanceBar.tsx';
 
 interface HomeProps {
   onNavigate: (page: string) => void;
@@ -12,9 +12,6 @@ export default function Home({ onNavigate }: HomeProps) {
 
   return (
     <div>
-      <Maintainance />
-      <MaintainanceBar />
-
       <section className="relative bg-linear-to-br from-blue-900 to-blue-700 text-white py-10 md:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
